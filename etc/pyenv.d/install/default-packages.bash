@@ -8,14 +8,14 @@ install_default_packages() {
   # Only install default packages after successfully installing Python.
   [ "$STATUS" = "0" ] || return 0
 
-  if [ -f "${PYENV_ROOT}/default-packages" ]; then
-    local args=( -r "${PYENV_ROOT}/default-packages" )
+  local requirements_file=${PYENV_ROOT}/default-packages
 
-    # Invoke `gem install` in the just-installed Ruby. Point its
-    # stdin to /dev/null or else it'll read from our default-packages
-    # file.
-    pyenv_VERSION="$VERSION_NAME" pyenv-exec pip install "${args[@]}" < /dev/null || {
-      echo "pyenv: error installing gem \`$gem_name'"
+  if [ -f "$requirements_file" ]; then
+    local args=( -r "$requirements_file" )
+
+    # Invoke `pip install` in the just-installed Python.
+    PYENV_VERSION="$VERSION_NAME" pyenv-exec pip install "${args[@]}" || {
+      echo "pyenv: error installing packages from  \`$requirements_file'"
     } >&2
   fi
 }
