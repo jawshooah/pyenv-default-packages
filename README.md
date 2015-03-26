@@ -21,7 +21,7 @@ version of Python with `pyenv install`.
 Specify packages in `~/.pyenv/default-packages` by name, one per line. This
 file should follow the pip [requirements file format][3]. For example:
 
-    pytest>=2.6.4
+    pytest >= 2.6.4
     futures; python_version < '2.7'
     http://my.package.repo/SomePackage-1.0.4.zip; python_version >= '3.4'
 
