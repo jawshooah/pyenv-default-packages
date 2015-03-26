@@ -4,6 +4,8 @@ This pyenv plugin hooks into the `pyenv install` command to
 automatically install packages every time you install a new version of
 Python.
 
+Forked from the excellent [`rbenv-default-gems`][1] plugin from [sstephenson][2].
+
 ## Installation
 
 Make sure you have the latest pyenv version, then run:
@@ -17,7 +19,7 @@ pyenv-default-packages automatically installs the packages listed in the
 version of Python with `pyenv install`.
 
 Specify packages in `~/.pyenv/default-packages` by name, one per line. This
-file should follow the pip [requirements file format][1]. For example:
+file should follow the pip [requirements file format][3]. For example:
 
     pytest>=2.6.4
     futures; python_version < '2.7'
@@ -52,4 +54,6 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[1]: https://pip.pypa.io/en/latest/reference/pip_install.html#requirements-file-format
+[1]: https://github.com/sstephenson/rbenv-default-gems
+[2]: https://github.com/sstephenson
+[3]: https://pip.pypa.io/en/latest/reference/pip_install.html#requirements-file-format
