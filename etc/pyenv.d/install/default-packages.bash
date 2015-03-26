@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 source "$(dirname ${BASH_SOURCE[0]})/../../../libexec/default-packages.sh"
 
 if declare -Ff after_install >/dev/null; then

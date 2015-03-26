@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 install_default_packages() {
   # Only install default packages after successfully installing Python.
   [ "$STATUS" = "0" ] || return 0
