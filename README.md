@@ -1,36 +1,37 @@
-# rbenv-default-gems
+# pyenv-default-pips
 
-This rbenv plugin hooks into the `rbenv install` command to
-automatically install gems every time you install a new version of
-Ruby.
+This pyenv plugin hooks into the `pyenv install` command to
+automatically install packages every time you install a new version of
+Python.
 
 ## Installation
 
-Make sure you have the latest rbenv and ruby-build versions, then run:
+Make sure you have the latest pyenv version, then run:
 
-    git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
+    git clone https://github.com/jawshooah/pyenv-default-pips.git ~/.pyenv/plugins/pyenv-default-pips
 
 ## Usage
 
-rbenv-default-gems automatically installs the gems listed in the
-`~/.rbenv/default-gems` file every time you successfully install a new
-version of Ruby with `rbenv install`.
+pyenv-default-pips automatically installs the packages listed in the
+`~/.pyenv/default-pips` file every time you successfully install a new
+version of Python with `pyenv install`.
 
-Specify gems in `~/.rbenv/default-gems` by name, one per line. You may
-optionally specify a version string after the name, or `--pre` to
-install a prerelease version. For example:
+Specify packages in `~/.pyenv/default-pips` by name, one per line. This
+file should follow the pip [requirements file format][1]. For example:
 
-    bundler
-    bcat ~>0.6
-    rails --pre
+    pytest>=2.6.4
+    futures; python_version < '2.7'
+    http://my.package.repo/SomePackage-1.0.4.zip; python_version >= '3.4'
 
-Blank lines and lines beginning with a `#` are ignored.
+A line that begins with `#` is treated as a comment and ignored. Whitespace
+followed by a `#` causes the `#` and the remainder of the line to be treated
+as a comment.
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2013 Sam Stephenson
+Copyright (c) 2015 Joshua Hagins
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -50,3 +51,5 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[1]: https://pip.pypa.io/en/latest/reference/pip_install.html#requirements-file-format
