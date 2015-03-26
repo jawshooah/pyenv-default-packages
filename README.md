@@ -1,4 +1,4 @@
-# pyenv-default-pips
+# pyenv-default-packages
 
 This pyenv plugin hooks into the `pyenv install` command to
 automatically install packages every time you install a new version of
@@ -8,15 +8,15 @@ Python.
 
 Make sure you have the latest pyenv version, then run:
 
-    git clone https://github.com/jawshooah/pyenv-default-pips.git ~/.pyenv/plugins/pyenv-default-pips
+    git clone https://github.com/jawshooah/pyenv-default-packages.git ~/.pyenv/plugins/pyenv-default-packages
 
 ## Usage
 
-pyenv-default-pips automatically installs the packages listed in the
-`~/.pyenv/default-pips` file every time you successfully install a new
+pyenv-default-packages automatically installs the packages listed in the
+`~/.pyenv/default-packages` file every time you successfully install a new
 version of Python with `pyenv install`.
 
-Specify packages in `~/.pyenv/default-pips` by name, one per line. This
+Specify packages in `~/.pyenv/default-packages` by name, one per line. This
 file should follow the pip [requirements file format][1]. For example:
 
     pytest>=2.6.4
