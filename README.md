@@ -8,9 +8,29 @@ Forked from the excellent [`rbenv-default-gems`][1] plugin from [sstephenson][2]
 
 ## Installation
 
+### Installing as a pyenv plugin
+
 Make sure you have the latest pyenv version, then run:
 
     git clone https://github.com/jawshooah/pyenv-default-packages.git ~/.pyenv/plugins/pyenv-default-packages
+
+### Installing with Homebrew (for OS X users)
+
+Mac OS X users can install pyenv-default-packages with the
+[Homebrew](http://brew.sh) package manager.
+
+*This is the recommended method of installation if you installed pyenv
+ with Homebrew.*
+
+```
+$ brew install jawshooah/pyenv/pyenv-default-packages
+```
+
+Or, if you would like to install the latest development release:
+
+```
+$ brew install --HEAD jawshooah/pyenv/pyenv-default-packages
+```
 
 ## Usage
 
