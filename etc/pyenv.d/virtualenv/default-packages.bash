@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source "$(dirname ${BASH_SOURCE[0]})/../../../libexec/default-packages.sh"
+source "${BASH_SOURCE[0]%/*}/../../../libexec/default-packages.sh"
 
 if declare -Ff after_virtualenv >/dev/null; then
   after_virtualenv "install_default_packages $VIRTUALENV_NAME"

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source "$(dirname ${BASH_SOURCE[0]})/../../../libexec/default-packages.sh"
+source "${BASH_SOURCE[0]%/*}/../../../libexec/default-packages.sh"
 
 if declare -Ff after_install >/dev/null; then
   after_install "install_default_packages $VERSION_NAME"
