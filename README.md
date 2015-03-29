@@ -1,8 +1,8 @@
 # pyenv-default-packages
 
-This pyenv plugin hooks into the `pyenv install` command to
-automatically install packages every time you install a new version of
-Python.
+This pyenv plugin hooks into the `pyenv install` and `pyenv virtualenv`
+commands to automatically install packages every time you install a new
+version of Python or create a new virtualenv.
 
 Forked from the excellent [`rbenv-default-gems`][1] plugin from [sstephenson][2].
 
@@ -36,7 +36,8 @@ $ brew install --HEAD jawshooah/pyenv/pyenv-default-packages
 
 pyenv-default-packages automatically installs the packages listed in the
 `~/.pyenv/default-packages` file every time you successfully install a new
-version of Python with `pyenv install`.
+version of Python with `pyenv install` or create a virtualenv with
+`pyenv virtualenv`.
 
 Specify packages in `~/.pyenv/default-packages` by name, one per line. This
 file should follow the pip [requirements file format][3]. For example:
